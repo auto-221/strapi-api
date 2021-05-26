@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "modeles",
+  "info": {
+    "name": "modele"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "libelle": {
+      "type": "string",
+      "required": true
+    },
+    "marque": {
+      "via": "modeles",
+      "model": "marque"
+    }
+  }
+}

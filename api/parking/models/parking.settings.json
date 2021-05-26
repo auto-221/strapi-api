@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parkings",
+  "info": {
+    "name": "parking"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "logo": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "siteweb": {
+      "type": "string"
+    },
+    "jobHeure": {
+      "type": "integer"
+    },
+    "voitures": {
+      "via": "parking",
+      "collection": "voiture"
+    }
+  }
+}

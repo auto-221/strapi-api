@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marques",
+  "info": {
+    "name": "marque",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "libelle": {
+      "type": "string",
+      "required": true
+    },
+    "modeles": {
+      "collection": "modele",
+      "via": "marque"
+    }
+  }
+}

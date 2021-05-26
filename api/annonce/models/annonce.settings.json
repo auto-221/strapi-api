@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "annonces",
+  "info": {
+    "name": "annonce",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "prix": {
+      "type": "integer",
+      "required": true
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "etat": {
+      "type": "integer"
+    },
+    "voiture": {
+      "via": "annonces",
+      "model": "voiture"
+    },
+    "users_permissions_user": {
+      "via": "annonces",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

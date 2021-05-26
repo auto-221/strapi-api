@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "voitures",
+  "info": {
+    "name": "voiture",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "annee": {
+      "type": "integer"
+    },
+    "carburant": {
+      "type": "string"
+    },
+    "kilometrage": {
+      "type": "integer"
+    },
+    "transmission": {
+      "type": "string"
+    },
+    "places": {
+      "type": "integer",
+      "required": true
+    },
+    "photo1": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "photo2": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "photo3": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "photo4": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "photo5": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "marque": {
+      "model": "marque"
+    },
+    "parking": {
+      "via": "voitures",
+      "model": "parking"
+    },
+    "annonces": {
+      "via": "voiture",
+      "collection": "annonce"
+    }
+  }
+}
