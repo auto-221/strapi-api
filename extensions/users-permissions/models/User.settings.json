@@ -68,6 +68,10 @@
     },
     "adresse": {
       "type": "string"
+    },
+    "parking": {
+      "model": "parking",
+      "via": "user"
     }
   }
 }
