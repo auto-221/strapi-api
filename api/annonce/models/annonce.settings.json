@@ -35,6 +35,10 @@
       "via": "annonces",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "type": {
+      "type": "string",
+      "required": true
     }
   }
 }
