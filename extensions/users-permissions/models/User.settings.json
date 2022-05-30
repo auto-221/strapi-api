@@ -72,6 +72,10 @@
     "parking": {
       "model": "parking",
       "via": "user"
+    },
+    "profil": {
+      "model": "profil",
+      "via": "users"
     }
   }
 }

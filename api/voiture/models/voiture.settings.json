@@ -26,10 +26,7 @@
     },
     "places": {
       "type": "integer",
-      "required": true
-    },
-    "marque": {
-      "model": "marque"
+      "required": false
     },
     "parking": {
       "via": "voitures",
@@ -52,11 +49,11 @@
       "pluginOptions": {}
     },
     "photo2": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
@@ -98,6 +95,12 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "type": {
+      "type": "string"
+    },
+    "modele": {
+      "model": "modele"
     }
   }
 }

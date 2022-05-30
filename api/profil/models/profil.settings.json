@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profils",
+  "info": {
+    "name": "Profil"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "libelle": {
+      "type": "string"
+    },
+    "users": {
+      "via": "profil",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
