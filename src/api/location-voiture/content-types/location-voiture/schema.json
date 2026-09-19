@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "location_voitures",
+  "info": {
+    "singularName": "location-voiture",
+    "pluralName": "location-voitures",
+    "displayName": "Location Voiture",
+    "description": "Réservations de location de voiture"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date_debut": {
+      "type": "date",
+      "required": true
+    },
+    "date_fin": {
+      "type": "date",
+      "required": true
+    },
+    "prix_total": {
+      "type": "decimal"
+    },
+    "statut": {
+      "type": "enumeration",
+      "enum": ["en_attente", "confirme", "annule", "termine"],
+      "default": "en_attente"
+    },
+    "voiture": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::voiture.voiture",
+      "inversedBy": "location_voitures"
+    }
+  }
+}

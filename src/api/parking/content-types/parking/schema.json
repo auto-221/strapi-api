@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parkings",
+  "info": {
+    "singularName": "parking",
+    "pluralName": "parkings",
+    "displayName": "Parking",
+    "description": "Parkings disponibles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "adresse": {
+      "type": "string",
+      "required": true
+    },
+    "ville": {
+      "type": "string",
+      "required": true
+    },
+    "capacite": {
+      "type": "integer"
+    },
+    "prix_par_jour": {
+      "type": "decimal",
+      "required": true
+    },
+    "disponible": {
+      "type": "boolean",
+      "default": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "latitude": {
+      "type": "decimal"
+    },
+    "longitude": {
+      "type": "decimal"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

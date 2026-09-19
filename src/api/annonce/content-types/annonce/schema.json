@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "annonces",
+  "info": {
+    "singularName": "annonce",
+    "pluralName": "annonces",
+    "displayName": "Annonce",
+    "description": "Annonces de vente ou location"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "prix": {
+      "type": "decimal",
+      "required": true
+    },
+    "categorie": {
+      "type": "enumeration",
+      "enum": ["voiture", "parking"],
+      "required": true
+    },
+    "statut": {
+      "type": "enumeration",
+      "enum": ["actif", "vendu", "loue", "inactif"],
+      "default": "actif"
+    },
+    "ville": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "voiture": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::voiture.voiture"
+    },
+    "parking": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parking.parking"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "voitures",
+  "info": {
+    "singularName": "voiture",
+    "pluralName": "voitures",
+    "displayName": "Voiture",
+    "description": "Voitures à vendre ou à louer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "marque": {
+      "type": "string",
+      "required": true
+    },
+    "modele": {
+      "type": "string",
+      "required": true
+    },
+    "annee": {
+      "type": "integer",
+      "required": true
+    },
+    "prix": {
+      "type": "decimal",
+      "required": true
+    },
+    "kilometrage": {
+      "type": "integer"
+    },
+    "carburant": {
+      "type": "enumeration",
+      "enum": ["essence", "diesel", "electrique", "hybride", "gpl"]
+    },
+    "transmission": {
+      "type": "enumeration",
+      "enum": ["manuelle", "automatique"]
+    },
+    "couleur": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "statut": {
+      "type": "enumeration",
+      "enum": ["disponible", "vendu", "reserve"],
+      "default": "disponible"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "location_voitures": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location-voiture.location-voiture",
+      "mappedBy": "voiture"
+    }
+  }
+}
