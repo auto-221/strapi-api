@@ -12,6 +12,7 @@ const AUTHENTICATED_PERMISSIONS = {
   'api::voiture.voiture': ['find', 'findOne', 'create', 'update', 'delete'],
   'api::parking.parking': ['find', 'findOne', 'create', 'update', 'delete'],
   'api::location-voiture.location-voiture': ['find', 'findOne', 'create', 'update', 'delete'],
+  'plugin::upload.content-api': ['upload', 'find', 'findOne', 'destroy'],
 };
 
 async function setPermissions(strapi: Core.Strapi, roleName: string, permissions: Record<string, string[]>) {
